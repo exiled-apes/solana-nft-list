@@ -6,11 +6,9 @@ import App from "./App";
 import SolanaProvider from "./contexts/SolanaProvider";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <SolanaProvider>
-      <App />
-    </SolanaProvider>
-  </React.StrictMode>,
+  <SolanaProvider>
+    <App />
+  </SolanaProvider>,
   document.getElementById("root")
 );
 
