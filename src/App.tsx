@@ -33,7 +33,7 @@ export default function App() {
       <WalletDialogButton />
       <hr />
       {(nfts || []).map((nft) => (
-        <div key={nft.name}>
+        <div key={nft.mint}>
           <img src={metadata?.[nft.mint]?.image} alt="nft" width="200" />
           <br />
           {nft.data.name}
