@@ -27,22 +27,18 @@ export default function App() {
     if (nfts?.length) fetchMetadata();
   }, [nfts, fetchMetadata]);
 
-  const renderNft = useCallback(
-    (nft) => {
-      <div key={nft.name}>
-        <img src={metadata?.[nft.mint]?.image} alt="nft" width="200" />
-        <br />
-        {nft.data.name}
-      </div>;
-    },
-    [metadata]
-  );
-
   return (
     <>
       <h1>Solana NFT List</h1>
       <WalletDialogButton />
-      {(nfts || []).map(renderNft)}
+      <hr />
+      {(nfts || []).map((nft) => (
+        <div key={nft.name}>
+          <img src={metadata?.[nft.mint]?.image} alt="nft" width="200" />
+          <br />
+          {nft.data.name}
+        </div>
+      ))}
     </>
   );
 }

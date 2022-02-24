@@ -10,7 +10,8 @@ import {
 } from "@solana/wallet-adapter-react";
 import { WalletDialogProvider } from "@solana/wallet-adapter-material-ui";
 
-const ENDPOINT = "https://api.devnet.solana.com";
+// const ENDPOINT = "https://api.devnet.solana.com";
+const ENDPOINT = "https://api.mainnet-beta.solana.com";
 
 export default function App({ children }) {
   const wallets = useMemo(() => [getPhantomWallet(), getSolflareWallet()], []);
