@@ -1,6 +1,6 @@
 # Solana NFT List
 
-A simple React starter app that allows a user to connec their wallet and displays their NFTs.
+A simple React starter app that allows a user to connect their wallet and displays their NFTs.
 
 ## Setup
 
